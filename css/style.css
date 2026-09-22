@@ -591,7 +591,6 @@ button { font: inherit; color: inherit; }
   grid-template-columns: 1fr;
   gap: 32px;
   background: #000000; 
-  /* Isti border kao na glavnim kontejnerima/dugmićima */
   border: 0; 
   clip-path: polygon(0 0, calc(100% - var(--cut-sm)) 0, 100% var(--cut-sm), 100% 100%, 0 100%);  
   padding: 32px;
@@ -635,7 +634,6 @@ button { font: inherit; color: inherit; }
   text-decoration: underline;
 }
 
-/* Cene personalnih treninga u karticama */
 .pt-prices {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -646,8 +644,7 @@ button { font: inherit; color: inherit; }
 
 .pt-box {
   background: var(--surface-2);
-  /* Konzistentan border kao na ostalim elementima / dugmićima */
- border: 0; 
+  border: 0; 
   clip-path: polygon(0 0, calc(100% - var(--cut-sm)) 0, 100% var(--cut-sm), 100% 100%, 0 100%);  
   padding: 15px;
   display: flex;
@@ -712,7 +709,7 @@ button { font: inherit; color: inherit; }
 .badge {
   display: inline-flex;
   align-items: center;
-  align-self: flex-start; /* Osigurava da je uvijek uz lijevu ivicu */
+  align-self: flex-start; 
   margin: 0;
   margin-bottom:15px;
   padding: 6px 14px;
@@ -725,9 +722,6 @@ button { font: inherit; color: inherit; }
   text-transform: uppercase;
   letter-spacing: 0.5px;
 
-
-
- 
 }
 
 
@@ -762,7 +756,6 @@ button { font: inherit; color: inherit; }
     grid-template-areas: "head" "list"; 
   }
 
-  /* Sakrij sa strane / sa dna veliku desktop sliku */
   .gear__media { 
     display: none; 
   }
@@ -771,7 +764,6 @@ button { font: inherit; color: inherit; }
     align-self: stretch; 
   }
 
-  /* Prikaži sliku unutar otvorenog panela samo na mobilnom */
   .gear-item__mobile-img {
     display: block;
     margin-top: 16px;
@@ -853,7 +845,6 @@ button { font: inherit; color: inherit; }
     gap: 10px;
     padding: 12px var(--gutter);
     
-    /* Dodajemo dno koristeći env() ali sa fiksnom rezervom */
     padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     
     background: rgba(0, 0, 0, .95); /* Blago pojačana opacitost radi stabilnijeg sloja */
@@ -861,7 +852,6 @@ button { font: inherit; color: inherit; }
     backdrop-filter: blur(12px);
     border-top: 1px solid var(--line);
 
-    /* OVE DVIJE LINIJE SPREČAVAJU POMERANJE PRI SKROLOVANJU */
     transform: translateZ(0); 
     -webkit-transform: translateZ(0);
   }
@@ -872,7 +862,6 @@ button { font: inherit; color: inherit; }
   .lb-close { right: 8px; }
 }
 
-/* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }

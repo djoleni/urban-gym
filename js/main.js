@@ -2,8 +2,12 @@
 (() => {
   'use strict';
 
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname + window.location.search);
+  }
+
   if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
+    history.scrollRestoration = 'manual';
   }
 
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
@@ -112,37 +116,37 @@
   window.setInterval(renderStatus, 60 * 1000);
 
   /* ---------- Oprema: harmonika + promena slike ---------- */
-const gearItems = $$('[data-gear]'); const gearImgs = $$('[data-gear-img]');
+  const gearItems = $$('[data-gear]'); const gearImgs = $$('[data-gear-img]');
 
-const openGear = (index) => {
-  gearItems.forEach((item, i) => {
-    const on = i === index;
-    item.classList.toggle('is-open', on);
-    $('button', item).setAttribute('aria-expanded', String(on));
+  const openGear = (index) => {
+    gearItems.forEach((item, i) => {
+      const on = i === index;
+      item.classList.toggle('is-open', on);
+      $('button', item).setAttribute('aria-expanded', String(on));
 
-    const panelInner = $('.gear-item__panel > div', item);
-    let mobileImgWrap = $('.gear-item__mobile-img', panelInner);
+      const panelInner = $('.gear-item__panel > div', item);
+      let mobileImgWrap = $('.gear-item__mobile-img', panelInner);
 
-    if (on) {
-      // Dinamički kreiramo sliku unutar otvorenog panela ako već ne postoji
-      if (!mobileImgWrap) {
-        mobileImgWrap = document.createElement('div');
-        mobileImgWrap.className = 'gear-item__mobile-img';
-        mobileImgWrap.innerHTML = `<img src="${gearImgs[i].src}" alt="${gearImgs[i].alt}" loading="eager">`;
-        panelInner.appendChild(mobileImgWrap);
+      if (on) {
+        // Dinamički kreiramo sliku unutar otvorenog panela ako već ne postoji
+        if (!mobileImgWrap) {
+          mobileImgWrap = document.createElement('div');
+          mobileImgWrap.className = 'gear-item__mobile-img';
+          mobileImgWrap.innerHTML = `<img src="${gearImgs[i].src}" alt="${gearImgs[i].alt}" loading="eager">`;
+          panelInner.appendChild(mobileImgWrap);
+        }
       }
-    }
-  });
+    });
 
-  // Glavna slika za desktop prikaz
-  gearImgs.forEach((img, i) => img.classList.toggle('is-active', i === index));
-};
+    // Glavna slika za desktop prikaz
+    gearImgs.forEach((img, i) => img.classList.toggle('is-active', i === index));
+  };
 
-// Dodavanje Event Listener-a na klik
-gearItems.forEach((item, i) => $('button', item).addEventListener('click', () => openGear(i)));
+  // Dodavanje Event Listener-a na klik
+  gearItems.forEach((item, i) => $('button', item).addEventListener('click', () => openGear(i)));
 
-// INICIJALIZACIJA: Odmah otvori prvu karticu (index 0) i učitaj njenu sliku pri prvom ulasku na sajt
-openGear(0);
+  openGear(0);
+  
   /* ---------- Cenovnik: muškarci / žene ---------- */
   const priceRoot = $('[data-prices]');
   const genderBtns = $$('[data-gender]', priceRoot);
