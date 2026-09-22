@@ -2,6 +2,10 @@
 (() => {
   'use strict';
 
+  if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+  }
+
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
