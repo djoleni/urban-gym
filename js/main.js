@@ -120,22 +120,25 @@ const openGear = (index) => {
     let mobileImgWrap = $('.gear-item__mobile-img', panelInner);
 
     if (on) {
-      // Dinamički kreiramo sliku unutar kartice samo ako već ne postoji
+      // Dinamički kreiramo sliku unutar otvorenog panela ako već ne postoji
       if (!mobileImgWrap) {
         mobileImgWrap = document.createElement('div');
         mobileImgWrap.className = 'gear-item__mobile-img';
-        mobileImgWrap.innerHTML = `<img src="${gearImgs[i].src}" alt="${gearImgs[i].alt}" loading="lazy">`;
+        mobileImgWrap.innerHTML = `<img src="${gearImgs[i].src}" alt="${gearImgs[i].alt}" loading="eager">`;
         panelInner.appendChild(mobileImgWrap);
       }
     }
   });
 
-  // Glavna slika sa strane za desktop
+  // Glavna slika za desktop prikaz
   gearImgs.forEach((img, i) => img.classList.toggle('is-active', i === index));
 };
 
+// Dodavanje Event Listener-a na klik
 gearItems.forEach((item, i) => $('button', item).addEventListener('click', () => openGear(i)));
 
+// INICIJALIZACIJA: Odmah otvori prvu karticu (index 0) i učitaj njenu sliku pri prvom ulasku na sajt
+openGear(0);
   /* ---------- Cenovnik: muškarci / žene ---------- */
   const priceRoot = $('[data-prices]');
   const genderBtns = $$('[data-gender]', priceRoot);

@@ -87,6 +87,7 @@ body {
 }
 body.no-scroll { overflow: hidden; }
 
+
 h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
 ul, ol { padding: 0; list-style: none; }
 img { display: block; max-width: 100%; }
@@ -840,12 +841,31 @@ button { font: inherit; color: inherit; }
 
   .footer__grid { grid-template-columns: 1fr; }
 
+@media (max-width: 720px) {
   .dock {
-    position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
-    padding: 12px var(--gutter) calc(12px + env(safe-area-inset-bottom, 0px));
-    background: rgba(0, 0, 0, .9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 12px var(--gutter);
+    
+    /* Dodajemo dno koristeći env() ali sa fiksnom rezervom */
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    
+    background: rgba(0, 0, 0, .95); /* Blago pojačana opacitost radi stabilnijeg sloja */
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     border-top: 1px solid var(--line);
+
+    /* OVE DVIJE LINIJE SPREČAVAJU POMERANJE PRI SKROLOVANJU */
+    transform: translateZ(0); 
+    -webkit-transform: translateZ(0);
   }
+}
   .dock .btn { min-height: 50px; padding: 0 1rem; }
   .lb-prev { left: 8px; }
   .lb-next { right: 8px; }
