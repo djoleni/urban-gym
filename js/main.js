@@ -91,7 +91,7 @@
 
     if (now.minutes >= openAt && now.minutes < closeAt) {
       isOpen = true;
-      text = `Otvoreno do ${pad(h.close)}:00`;
+      text = `Otvoreno`;
     } else if (now.minutes < openAt) {
       text = `Zatvoreno, otvara se u ${pad(h.open)}:00`;
     } else {
@@ -108,17 +108,33 @@
   window.setInterval(renderStatus, 60 * 1000);
 
   /* ---------- Oprema: harmonika + promena slike ---------- */
-  const gearItems = $$('[data-gear]');
-  const gearImgs = $$('[data-gear-img]');
-  const openGear = (index) => {
-    gearItems.forEach((item, i) => {
-      const on = i === index;
-      item.classList.toggle('is-open', on);
-      $('button', item).setAttribute('aria-expanded', String(on));
-    });
-    gearImgs.forEach((img, i) => img.classList.toggle('is-active', i === index));
-  };
-  gearItems.forEach((item, i) => $('button', item).addEventListener('click', () => openGear(i)));
+const gearItems = $$('[data-gear]'); const gearImgs = $$('[data-gear-img]');
+
+const openGear = (index) => {
+  gearItems.forEach((item, i) => {
+    const on = i === index;
+    item.classList.toggle('is-open', on);
+    $('button', item).setAttribute('aria-expanded', String(on));
+
+    const panelInner = $('.gear-item__panel > div', item);
+    let mobileImgWrap = $('.gear-item__mobile-img', panelInner);
+
+    if (on) {
+      // Dinamički kreiramo sliku unutar kartice samo ako već ne postoji
+      if (!mobileImgWrap) {
+        mobileImgWrap = document.createElement('div');
+        mobileImgWrap.className = 'gear-item__mobile-img';
+        mobileImgWrap.innerHTML = `<img src="${gearImgs[i].src}" alt="${gearImgs[i].alt}" loading="lazy">`;
+        panelInner.appendChild(mobileImgWrap);
+      }
+    }
+  });
+
+  // Glavna slika sa strane za desktop
+  gearImgs.forEach((img, i) => img.classList.toggle('is-active', i === index));
+};
+
+gearItems.forEach((item, i) => $('button', item).addEventListener('click', () => openGear(i)));
 
   /* ---------- Cenovnik: muškarci / žene ---------- */
   const priceRoot = $('[data-prices]');

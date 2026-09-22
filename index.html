@@ -10,6 +10,9 @@
   <meta property="og:locale" content="sr_RS">
   <meta property="og:title" content="Urban Gym Niš | Moderna i čista teretana">
   <meta property="og:description" content="Nova oprema, svetao prostor i Fitpass partner. Romanijska 19, lokal L1, Niš.">
+  <meta property="og:image" content="https://urban-gym.vercel.app/assets/img/entrance.webp">
+
+
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
   <!--FONTS:START-->
@@ -27,6 +30,7 @@
     "@type": "ExerciseGym",
     "name": "Urban Gym",
     "description": "Moderna i čista teretana u Nišu sa novom opremom. Fitpass partner.",
+    "image": "assets/img/entrance.webp",
     "telephone": "+381669094936",
     "address": {
       "@type": "PostalAddress",
@@ -83,9 +87,9 @@
         </ul>
       </nav>
 
-      <a class="btn btn--sm header__cta" href="tel:+381669094936">
-        <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
-        Pozovi
+      <a class="btn btn--sm header__cta" href="#trenere">Zakaži trening</a>
+        <!-- <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
+        Pozovi -->
       </a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni" aria-label="Otvori meni" data-menu-btn>
         <svg class="ico ico--lg ico-open" aria-hidden="true"><use href="#i-menu"/></svg>
@@ -116,7 +120,7 @@
         </div>
 
         <p class="hero__lead">
-          Moderna i čista teretana na Romanijskoj ulici u Nišu. Nova oprema poznatih brendova, prostor pun svetla i članovi koji nas na Fitpass-u ocenjuju sa 9,7 od 10.
+          Moderna teretana u Nišu namenjena svima koji žele kvalitetan trening u čistom, prijatnom i uređenom prostoru.
         </p>
 
         <div class="hero__cta">
@@ -147,27 +151,26 @@
     <section class="section" id="o-nama" aria-labelledby="o-nama-h">
       <div class="wrap about">
         <div class="about__text">
-          <h2 class="h2" id="o-nama-h">Trening u prostoru koji je čist, svetao i uredan</h2>
+          <h2 class="h2" id="o-nama-h">Prostor prilagođen tvojim fitnes ciljevima</h2>
           <p class="lead">
-            Urban Gym je moderna teretana u Medijani, na Romanijskoj 19. Uređena je tako da ti se vraća: po danu prostor puni prirodno svetlo kroz velike prozore, a uveče ga preuzimaju LED linije i neon. Oprema je nova, svaki teg ima svoje mesto, a higijenu i osoblje članovi ocenjuju sa 9,9 od 10.
+            Dizajnirali smo teretanu u kojoj je fokus na dobrom treningu, higijeni i opremljenosti.
           </p>
 
           <ul class="points">
             <li>
-              <h3>Nova oprema</h3>
-              <p>Technogym sprave, Hammer Strength rekovi, Jerai Fitness Smith mašina i Life Fitness kardio.</p>
-            </li>
+              <h3>Vrhunska oprema</h3>
+              <p><b>Technogym</b>, <b>Hammer Strength</b>, <b>Jerai Fitness</b> i <b>Life Fitness</b>.</p>            </li>
             <li>
-              <h3>Svetao prostor</h3>
-              <p>Veliki prozori po danu, LED osvetljenje i neon uveče.</p>
+              <h3>Osvetljen prostor</h3>
+              <p>Dnevno svetlo, LED osvetljenje, Neon</p>
             </li>
             <li>
               <h3>Otvoreno svaki dan</h3>
-              <p>Radnim danima od 08 do 22h, vikendom od 10 do 20h.</p>
+              <p>Tvoj kontinuitet i treninzi nemaju prepreka.</p>
             </li>
             <li>
               <h3>Fitpass partner</h3>
-              <p>Član si Fitpass kluba? Skeniraj QR kod i treniraj.</p>
+              <p>Tvoj Fitpass ti donosi više: skeniraj kod i uživaj u svim klupskim benefitima.</p>
             </li>
           </ul>
         </div>
@@ -194,7 +197,7 @@
       <div class="wrap gear">
         <header class="gear__head">
           <h2 class="h2" id="oprema-h">Sve za ceo trening na jednom mestu</h2>
-          <p class="lead">Od Technogym sprava do slobodnih tegova i kardio zone. Izaberi deo prostora da ga vidiš izbliza.</p>
+          <p class="lead">Od Technogym sprava do slobodnih tegova i kardio zone. Izaberi deo prostora za prikaz.</p>
         </header>
 
         <div class="gear__list">
@@ -261,25 +264,25 @@
       <div class="wrap">
         <header class="section-head">
           <h2 class="h2" id="galerija-h">Pogledaj iznutra</h2>
-          <p class="lead">Po danu svetlost kroz velike prozore, uveče LED linije i neon.</p>
+          <p class="lead">Istraži radne zone, sprave i ambijent teretane.</p>
         </header>
 
         <div class="gallery">
-          <button class="shot shot--a" type="button" data-shot aria-label="Uvećaj sliku: večernji prostor sa bučicama i šipkama">
-            <img src="assets/img/night-floor.webp" alt="Večernji prostor teretane sa bučicama, šipkama i neonom Gym mode on" width="1360" height="822" loading="lazy" decoding="async">
-            <span class="shot__cap">Uveče: LED linije, bučice i šipke</span>
+          <button class="shot shot--a" type="button" data-shot aria-label="Uvećaj sliku: Zona slobodnih tegova">
+            <img src="assets/img/night-floor.webp" alt="Zona slobodnih tegova sa bučicama i bučicama na stalku" width="1360" height="822" loading="lazy">
+            <span class="shot__cap">Zona slobodnih tegova</span>
           </button>
-          <button class="shot shot--b" type="button" data-shot aria-label="Uvećaj sliku: stalak za klupu i bumper tegovi">
-            <img src="assets/img/bench-rack.webp" alt="Stalak za potisak sa klupe i tegovi u prostoru sa velikim prozorima" width="680" height="1020" loading="lazy" decoding="async">
-            <span class="shot__cap">Stalak za potisak i tegovi</span>
+          <button class="shot shot--b" type="button" data-shot aria-label="Uvećaj sliku: Bench press stalak">
+            <img src="assets/img/bench-rack.webp" alt="Stalak za potisak sa klupe i bumper tegovi" width="680" height="1020" loading="lazy">
+            <span class="shot__cap">Incline Bench press</span>
           </button>
-          <button class="shot shot--c" type="button" data-shot aria-label="Uvećaj sliku: teretana po danu">
-            <img src="assets/img/day-floor.webp" alt="Teretana po danu: half rack, klupe i Technogym sprava uz velike prozore" width="1360" height="907" loading="lazy" decoding="async">
-            <span class="shot__cap">Po danu: slobodni tegovi i Technogym</span>
+          <button class="shot shot--c" type="button" data-shot aria-label="Uvećaj sliku: Main workout area">
+            <img src="assets/img/day-floor.webp" alt="Glavni prostor za trening sa spravama i bučicama" width="1360" height="907" loading="lazy">
+            <span class="shot__cap">Glavni prostor za trening</span>
           </button>
-          <button class="shot shot--d" type="button" data-shot aria-label="Uvećaj sliku: podijum sa kardio spravama uveče">
-            <img src="assets/img/cardio-podium.webp" alt="Podijum sa Technogym spravama, Life Fitness trakama i plavim LED linijama" width="1360" height="907" loading="lazy" decoding="async">
-            <span class="shot__cap">Uveče: podijum sa LED linijama</span>
+          <button class="shot shot--d" type="button" data-shot aria-label="Uvećaj sliku: Kardio zona">
+            <img src="assets/img/cardio-podium.webp" alt="Kardio zona na podijumu sa trakama za trčanje" width="1360" height="907" loading="lazy">
+            <span class="shot__cap">Kardio zona na podijumu</span>
           </button>
         </div>
       </div>
@@ -291,7 +294,7 @@
         <header class="section-head section-head--row">
           <div>
             <h2 class="h2" id="cenovnik-h">Izaberi članarinu</h2>
-            <p class="lead">Cene za muškarce i žene, a za parove, studente i porodice postoje posebne opcije.</p>
+            <p class="lead">Odaberi individualni paket ili ostvari pogodnosti uz studentske popuste, pakete za parove i porodične članarine.</p>
           </div>
           <div class="seg" role="group" aria-label="Cenovnik za">
             <button type="button" aria-pressed="true" data-gender="m">Muškarci</button>
@@ -376,19 +379,19 @@
       </div>
     </section>
 
-    <!-- ============ CTA ============ -->
+   <!-- ============ CTA ============ -->
     <section class="cta" aria-labelledby="cta-h">
       <svg class="led" viewBox="0 0 1200 420" preserveAspectRatio="xMaxYMid slice" aria-hidden="true" focusable="false">
         <g fill="none" stroke="#8ea0ff" stroke-width="3" stroke-linecap="round">
           <path d="M560 430 L1040 -10"/>
           <path d="M720 -10 L1180 430"/>
-          <path d="M880 430 L1260 120"/>
-          <path d="M500 60 L800 430"/>
         </g>
       </svg>
       <div class="wrap cta__inner">
-        <h2 class="h2 cta__title" id="cta-h">Dođi na jedan trening</h2>
-        <p class="lead">Dnevna karta košta 500 dinara. Pogledaj prostor, isprobaj sprave, pa onda izaberi članarinu.</p>
+        <h2 class="h2 cta__title" id="cta-h">Napravi prvi korak</h2>
+        <p class="lead">
+          Testiraj prostor uz dnevnu kartu ili zakaži probni personalni trening sa našim trenerom.
+        </p>
         <div class="cta__actions">
           <a class="btn" href="tel:+381669094936">
             <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
@@ -396,11 +399,72 @@
           </a>
           <a class="btn btn--soft" href="https://www.instagram.com/urban.gym.nis/" target="_blank" rel="noopener">
             <svg class="ico" aria-hidden="true"><use href="#i-insta"/></svg>
-            Pišite nam na Instagramu
+            Pisite nam na Instagramu
           </a>
         </div>
       </div>
     </section>
+
+
+  <!-- ============ TRENERI I PERSONALNI TRENING ============ -->
+  <section class="section section--surface" id="trenere" aria-labelledby="trenere-h">
+    <div class="wrap">
+      <header class="section-head">
+        <h2 class="h2" id="trenere-h">Personalni i vođeni treninzi</h2>
+        <p class="lead">Ostvari svoje ciljeve uz stručno vođenje, prilagođen plan ishrane i maksimalnu posvećenost trenera.</p>
+      </header>
+
+      <div class="trainer-card">
+        <div class="trainer-card__img-wrap">
+          <img src="assets/img/milos-trener.png" alt="Miloš - Personalni trener u Urban Gym-u" width="600" height="800" loading="lazy">
+        </div>
+
+        <div class="trainer-card__info">
+          <span class="badge">Personalni trener</span>
+          <h3 class="h2" style="font-size: 2.5rem; margin-top: 10px;">Miloš</h3>
+          <p class="trainer-card__handle">
+            <a href="https://www.instagram.com/losmitrener/" target="_blank" rel="noopener">@losmitrener</a>
+          </p>
+          <p class="lead" style="font-size: 1rem; margin-top: 14px;">
+            Specijalizovan za transformaciju tela, izgradnju snage i hipertrofiju. Sa individualnim pristupom svakom klijentu, osigurava pravilno izvođenje vežbi i brz napredak bez povreda.
+          </p>
+          
+          <div class="pt-prices">
+            <!-- 1 na 1 -->
+            <div class="pt-box">
+              <h4>1 NA 1</h4>
+              <p class="pt-box__desc">10 PERSONALNIH TRENINGA</p>
+              <p class="pt-box__price">15 000 <span>dinara*</span></p>
+            </div>
+
+            <!-- 2 na 1 -->
+            <div class="pt-box">
+              <h4>2 NA 1</h4>
+              <p class="pt-box__desc">10 PERSONALNIH TRENINGA</p>
+              <p class="pt-box__price">10 000 <span>dinara*</span></p>
+            </div>
+
+            <!-- 3 na 1 -->
+            <div class="pt-box">
+              <h4>3 NA 1</h4>
+              <p class="pt-box__desc">10 PERSONALNIH TRENINGA</p>
+              <p class="pt-box__price">8 000 <span>dinara*</span></p>
+            </div>
+          </div>
+
+          <!-- NAPOMENA O CENAMA -->
+          <p class="pt-note">* Sve navedene cene su izražene po osobi.</p>
+
+          <div style="margin-top: 24px;">
+            <a class="btn" href="https://www.instagram.com/losmitrener/" target="_blank" rel="noopener">
+              Zakaži trening sa Milošem
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
     <!-- ============ KONTAKT ============ -->
     <section class="section" id="kontakt" aria-labelledby="kontakt-h">
@@ -435,7 +499,7 @@
           <div class="hours">
             <h3><svg class="ico ico--lg" aria-hidden="true"><use href="#i-clock"/></svg> Radno vreme <span class="status" data-status></span></h3>
             <dl>
-              <div data-days="1,2,3,4,5"><dt>Ponedeljak do petak</dt><dd>08:00 – 22:00</dd></div>
+              <div data-days="1,2,3,4,5"><dt>Radnim danima</dt><dd>08:00 – 22:00</dd></div>
               <div data-days="0,6"><dt>Subota i nedelja</dt><dd>10:00 – 20:00</dd></div>
             </dl>
           </div>
@@ -469,7 +533,7 @@
             <img class="brand__mark" src="assets/img/logo-mark.png" alt="" width="231" height="256" loading="lazy">
             <span class="brand__word" aria-hidden="true"><b>RBAN</b>GYM</span>
           </a>
-          <p class="footer__tag">Moderno i čisto mesto za trening.</p>
+          <p class="footer__tag">Ovde počinje vaša fitness priča.</p>
         </div>
         <div>
           <h3>Lokacija</h3>
