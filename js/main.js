@@ -30,7 +30,9 @@
     menuBtn.setAttribute('aria-expanded', String(open));
     menuBtn.setAttribute('aria-label', open ? 'Zatvori meni' : 'Otvori meni');
   };
+  const navCloseBtn = $('[data-nav-close]', nav);
   menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
+  if (navCloseBtn) navCloseBtn.addEventListener('click', () => setMenu(false));
   nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
   window.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
   window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });

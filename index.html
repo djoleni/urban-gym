@@ -78,6 +78,9 @@
       </a>
 
       <nav class="nav" id="meni" data-nav aria-label="Glavni meni">
+        <button class="nav__close" type="button" aria-label="Zatvori meni" data-nav-close>
+          <svg class="ico ico--lg" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
         <ul>
           <li><a href="#o-nama">O nama</a></li>
           <li><a href="#oprema">Oprema</a></li>
@@ -88,9 +91,6 @@
       </nav>
 
       <a class="btn btn--sm header__cta" href="#treneri">Zakaži trening</a>
-        <!-- <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
-        Pozovi -->
-      </a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni" aria-label="Otvori meni" data-menu-btn>
         <svg class="ico ico--lg ico-open" aria-hidden="true"><use href="#i-menu"/></svg>
         <svg class="ico ico--lg ico-close" aria-hidden="true"><use href="#i-close"/></svg>
@@ -417,49 +417,45 @@
         <div class="trainer-card">
           <div class="trainer-card__img-wrap">
             <img src="assets/img/milos-trener.png" alt="Miloš - Personalni trener u Urban Gym-u" width="600" height="800" loading="lazy">
+            <span class="trainer-card__badge">Personalni trener</span>
           </div>
 
           <div class="trainer-card__info">
-            <span class="badge">Personalni trener</span>
-            <h3 class="h2" style="font-size: 2.5rem; margin-top: 10px;">Miloš</h3>
+            <h3 class="trainer-card__name">Miloš</h3>
             <p class="trainer-card__handle">
+              <svg class="ico" aria-hidden="true"><use href="#i-insta"/></svg>
               <a href="https://www.instagram.com/losmitrener/" target="_blank" rel="noopener">@losmitrener</a>
             </p>
-            <p class="lead" style="font-size: 1rem; margin-top: 14px;">
+            <p class="trainer-card__desc">
               Specijalizovan za transformaciju tela, izgradnju snage i hipertrofiju. Sa individualnim pristupom svakom klijentu, osigurava pravilno izvođenje vežbi i brz napredak bez povreda.
             </p>
-            
+
             <div class="pt-prices">
-              <!-- 1 na 1 -->
               <div class="pt-box">
                 <h4>1 NA 1</h4>
-                <p class="pt-box__desc">10 PERSONALNIH TRENINGA</p>
-                <p class="pt-box__price">15 000 <span>dinara*</span></p>
+                <p class="pt-box__desc">10 personalnih treninga</p>
+                <p class="pt-box__price">15.000 <span>din.*</span></p>
               </div>
 
-              <!-- 2 na 1 -->
               <div class="pt-box">
                 <h4>2 NA 1</h4>
-                <p class="pt-box__desc">10 PERSONALNIH TRENINGA</p>
-                <p class="pt-box__price">10 000 <span>dinara*</span></p>
+                <p class="pt-box__desc">10 personalnih treninga</p>
+                <p class="pt-box__price">10.000 <span>din.*</span></p>
               </div>
 
-              <!-- 3 na 1 -->
-              <div class="pt-box">
+              <div class="pt-box pt-box--best">
+                <span class="pt-box__tag">Najbolja cena</span>
                 <h4>3 NA 1</h4>
-                <p class="pt-box__desc">10 PERSONALNIH TRENINGA</p>
-                <p class="pt-box__price">8 000 <span>dinara*</span></p>
+                <p class="pt-box__desc">10 personalnih treninga</p>
+                <p class="pt-box__price">8.000 <span>din.*</span></p>
               </div>
             </div>
 
-            <!-- NAPOMENA O CENAMA -->
             <p class="pt-note">* Sve navedene cene su izražene po osobi.</p>
 
-            <div style="margin-top: 24px;">
-              <a class="btn" href="https://www.instagram.com/losmitrener/" target="_blank" rel="noopener">
-                Zakaži trening sa Milošem
-              </a>
-            </div>
+            <a class="btn trainer-card__cta" href="https://www.instagram.com/losmitrener/" target="_blank" rel="noopener">
+              Zakaži trening sa Milošem
+            </a>
           </div>
         </div>
       </div>
